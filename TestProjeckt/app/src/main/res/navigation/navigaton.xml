@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigaton"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.example.testprojeckt.MainScreenFragment"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen">
+        <action
+            android:id="@+id/action_mainScreen_to_fullInfoUsersFragment"
+            app:destination="@id/fullInfoUsersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fullInfoUsersFragment"
+        android:name="com.example.testprojeckt.FullInfoUsersFragment"
+        android:label="FullInfoUsersFragment" >
+    <argument
+        android:name="username"
+        app:argType="string"/>
+    <argument
+        android:name="userid"
+        app:argType="string"/>
+    <argument
+        android:name="useravatar"
+        app:argType="string"/>
+<!--        <argument-->
+<!--        android:name="comany"-->
+<!--        app:argType="string"/>-->
+<!--        <argument-->
+<!--        android:name="location"-->
+<!--        app:argType="string"/>-->
+<!--        <argument-->
+<!--        android:name="email"-->
+<!--        app:argType="string"/>-->
+<!--        <argument-->
+<!--        android:name="created_at"-->
+<!--        app:argType="string"/>-->
+    </fragment>
+
+</navigation>
